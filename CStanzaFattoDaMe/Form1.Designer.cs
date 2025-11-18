@@ -34,6 +34,7 @@
             textBox1 = new TextBox();
             label1 = new Label();
             panel2 = new Panel();
+            MESSAGGI = new ListBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -92,6 +93,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(MESSAGGI);
             panel2.Controls.Add(textBox1);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(label1);
@@ -100,6 +102,17 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(800, 350);
             panel2.TabIndex = 4;
+            // 
+            // MESSAGGI
+            // 
+            MESSAGGI.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            MESSAGGI.FormattingEnabled = true;
+            MESSAGGI.ItemHeight = 21;
+            MESSAGGI.Location = new Point(131, 124);
+            MESSAGGI.Name = "MESSAGGI";
+            MESSAGGI.Size = new Size(367, 172);
+            MESSAGGI.TabIndex = 4;
+            MESSAGGI.SelectedIndexChanged += MESSAGGI_SelectedIndexChanged;
             // 
             // Form1
             // 
@@ -124,5 +137,6 @@
         private TextBox textBox1;
         private Label label1;
         private Panel panel2;
+        private ListBox MESSAGGI;
     }
 }
